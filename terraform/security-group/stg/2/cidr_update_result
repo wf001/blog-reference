@@ -1,0 +1,22 @@
+Plan: 2 to add, 0 to change, 1 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+module.ec2.aws_instance.this: Destroying... [id=i-07e780428e8a2ce5a]
+module.ec2-sg.aws_security_group_rule.from_cidr[1]: Creating...
+module.ec2-sg.aws_security_group_rule.from_cidr[1]: Creation complete after 1s [id=sgrule-2650381230]
+module.ec2.aws_instance.this: Still destroying... [id=i-07e780428e8a2ce5a, 10s elapsed]
+module.ec2.aws_instance.this: Still destroying... [id=i-07e780428e8a2ce5a, 20s elapsed]
+module.ec2.aws_instance.this: Still destroying... [id=i-07e780428e8a2ce5a, 30s elapsed]
+module.ec2.aws_instance.this: Still destroying... [id=i-07e780428e8a2ce5a, 40s elapsed]
+module.ec2.aws_instance.this: Destruction complete after 41s
+module.ec2.aws_instance.this: Creating...
+module.ec2.aws_instance.this: Still creating... [10s elapsed]
+module.ec2.aws_instance.this: Creation complete after 13s [id=i-0a7ce2eda18c7cac6]
+
+Apply complete! Resources: 2 added, 0 changed, 1 destroyed.
+

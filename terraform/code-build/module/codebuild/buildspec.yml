@@ -1,0 +1,8 @@
+version: 0.2
+
+phases:
+    build:
+        commands:
+            - cd ..
+            - zip -r rails-test.zip rails-test
+            - aws s3 cp rails-test.zip s3://taki-bucket

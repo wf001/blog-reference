@@ -1,0 +1,69 @@
+Table:
+    AttributeDefinitions:
+        - AttributeName: lane_type
+          AttributeType: S
+        - AttributeName: created_at
+          AttributeType: S
+        - AttributeName: media_id
+          AttributeType: S
+        - AttributeName: fav_id
+          AttributeType: S
+        - AttributeName: user_id
+          AttributeType: S
+        - AttributeName: user_sub
+          AttributeType: S
+        - AttributeName: comment_id
+          AttributeType: S
+    KeySchema:
+        - AttributeName: lane_type
+          KeyType: HASH
+        - AttributeName: created_at
+          KeyType: RANGE
+    ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+    LocalSecondaryIndexes:
+        - IndexName: media_id
+          KeySchema:
+              - AttributeName: lane_type
+                KeyType: HASH
+              - AttributeName: media_id
+                KeyType: RANGE
+          Projection:
+              ProjectionType: ALL
+
+        - IndexName: fav_id
+          KeySchema:
+              - AttributeName: lane_type
+                KeyType: HASH
+              - AttributeName: fav_id
+                KeyType: RANGE
+          Projection:
+              ProjectionType: ALL
+
+        - IndexName: user_sub
+          KeySchema:
+              - AttributeName: lane_type
+                KeyType: HASH
+              - AttributeName: user_sub
+                KeyType: RANGE
+          Projection:
+              ProjectionType: ALL
+
+        - IndexName: user_id
+          KeySchema:
+              - AttributeName: lane_type
+                KeyType: HASH
+              - AttributeName: user_id
+                KeyType: RANGE
+          Projection:
+              ProjectionType: ALL
+
+        - IndexName: comment_id
+          KeySchema:
+              - AttributeName: lane_type
+                KeyType: HASH
+              - AttributeName: comment_id
+                KeyType: RANGE
+          Projection:
+              ProjectionType: ALL

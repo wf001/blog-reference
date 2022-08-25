@@ -1,0 +1,7 @@
+{
+  "name": "esa-ionic-ref-impl",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

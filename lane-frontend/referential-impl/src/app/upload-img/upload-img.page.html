@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>upload-img</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button (click)="handlePicker()">select image</ion-button>
+    <ion-button (click)="submit()">submit</ion-button>
+    <img [src]="imgForPreview">
+</ion-content>

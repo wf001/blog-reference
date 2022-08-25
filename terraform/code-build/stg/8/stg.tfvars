@@ -1,0 +1,5 @@
+codebuild_service_role_arn = "arn:aws:iam::288468731085:role/service-role/codebuild-xbrain-s3-001-service-role"
+repo_url = "https://github.com/wf001/rails-test"
+ssm_token_parameter_name = "codebuild-personal-access-token"
+build_prj_name = "rails-build-prj"
+branch_name = "master"

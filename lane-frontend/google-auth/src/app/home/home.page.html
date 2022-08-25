@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+      <p>{{userData | json}}</p>
+      <ion-button (click)="signUp()"> SignUp</ion-button>
+      <ion-button (click)="signOut()"> SignOut</ion-button>
+      <ion-button (click)="get()"> get token</ion-button>
+  </div>
+
+</ion-content>
